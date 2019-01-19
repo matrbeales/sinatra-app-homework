@@ -1,0 +1,10 @@
+.banner {
+  display: inline-block;
+  width: 98%;
+}
+
+div {
+  display: inline-block;
+  width: 30%;
+  margin: 1%
+}
