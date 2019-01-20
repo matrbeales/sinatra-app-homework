@@ -33,7 +33,7 @@ class AnimalsController < Sinatra::Base
   # Edit
   get "/:id/edit" do
     id = params[:id].to_i
-    @animals = Animal.find id
+    @animal = Animal.find id
     erb :"animals/edit.html"
   end
 

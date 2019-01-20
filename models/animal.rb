@@ -49,7 +49,7 @@ class Animal
     if !self.id
       sql = "INSERT INTO animal(animal_name, latin_name, description) VALUES('#{self.animal_name}', '#{self.latin_name}', '#{self.description}');"
     else
-      sql = "UPDATE animal SET title = '#{self.animal_name}', body = '#{self.latin_name}' WHERE id = #{self.description};"
+      sql = "UPDATE animal SET animal_name = '#{self.animal_name}', latin_name = '#{self.latin_name}', description = '#{self.description}' WHERE id = #{self.id};"
     end
 
     conn.exec(sql)
