@@ -1,0 +1,27 @@
+<form class="" action="/<%= @animal.id %>" method="POST">
+
+  <div class="">
+    <label>Animal Name</label>
+    <input type="text" name="animal_name" placeholder="Enter animal name" value="<%= @animal.animal_name %>">
+  </div>
+
+  <div class="">
+    <label>Latin Name</label>
+    <input type="text" name="latin_name" placeholder="Enter Latin Name" value="<%= @animal.latin_name %>">
+  </div>
+
+  <div class="">
+    <label>Description</label>
+    <textarea name="description" placeholder="Enter description"><%= @animal.description %></textarea>
+  </div>
+
+  <div class="">
+    <% if @animal.id %>
+      <input type="hidden" name="_method" value="PUT">
+    <% end %>
+  </div>
+
+  <div class="">
+    <input type="submit" value="Save Animal">
+  </div>
+</form>
